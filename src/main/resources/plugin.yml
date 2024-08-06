@@ -1,6 +1,5 @@
-name: Test
+name: SlimeBounce
 version: '1.0'
-main: net.xiaojibazhanshi.test.Main
+main: net.xiaojibazhanshi.slimebounce.SlimeBounce
 api-version: '1.21'
-commands:
-  gui:
+authors: [XiaoJibaZhanshi]

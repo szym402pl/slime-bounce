@@ -14,15 +14,15 @@ public class SlimeBounceRunnable extends BukkitRunnable {
     public void run() {
         for (Player player : Bukkit.getOnlinePlayers()) {
             Slime slime = BounceFactory.getFirstNearbySlime(player);
-            if (slime == null) continue;
 
-            if (BounceFactory.isValidContact(slime, player)) {
-                BounceFactory.bouncePlayer(slime, player, true);
-            }
+            if (slime == null || !BounceFactory.isValidContact(slime, player)) { continue; }
+
+            BounceFactory.bouncePlayer(slime, player, true);
         }
     }
 
     public void start(SlimeBounce main) {
         runTaskTimer(main, 0, 2);
     }
+
 }
