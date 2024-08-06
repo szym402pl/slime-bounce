@@ -1,0 +1,6 @@
+name: Test
+version: '1.0'
+main: net.xiaojibazhanshi.test.Main
+api-version: '1.21'
+commands:
+  gui:
